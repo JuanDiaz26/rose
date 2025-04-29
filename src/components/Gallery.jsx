@@ -7,7 +7,7 @@ import image2 from '../assets/image2.jpg';
 import image3 from '../assets/image3.JPG';
 import image4 from '../assets/image4.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Typewriter from 'typewriter-effect';
+import './Gallery.css';
 
 
 const Gallery = () => { 
@@ -18,34 +18,31 @@ const Gallery = () => {
   return (
     <div id='gallery' className="d-flex flex-column align-items-center py-5" style={{ backgroundColor: "pink", height: "90vh" }}>
       {/* Texto arriba del carrousel */}
-      <h2    className="mb-4" 
+      <div
+  className="mb-4"
   style={{
-    fontFamily: 'cursive', 
-    fontSize: '30px', 
-    color: '#fff', 
-    backgroundColor: '#e91e63', 
-    width: "90%", 
-    margin: "auto", 
-    textAlign: "center", 
-    fontWeight: "600", 
-    padding: '20px', 
-    borderRadius: '12px', 
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', 
-    transition: 'all 0.3s ease', 
+    fontFamily: 'cursive',
+    fontSize: '30px',
+    color: '#fff',
+    backgroundColor: '#e91e63',
+    width: "90%",
+    margin: "auto",
+    textAlign: "center",
+    fontWeight: "600",
+    padding: '20px',
+    borderRadius: '12px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    transition: 'all 0.3s ease',
   }}
   onMouseEnter={e => e.target.style.backgroundColor = '#d81b60'}
   onMouseLeave={e => e.target.style.backgroundColor = '#e91e63'}
 >
-      <Typewriter
-  options={{
-    strings: ["Algunos recuerditos juntos:✨"],
-    autoStart: true,
-    loop: true,
-    deleteSpeed: 50,
-    delay: 50,
-  }}
-/>
-</h2>
+  <div className="gallery-typewriter-wrapper">
+    <div className="gallery-typewriter-texts">
+      <span>Algunos recuerditos juntos ✨</span>
+    </div>
+  </div>
+</div>
 
       {/* Carrousel más chico */}
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel" style={{ width: '85%', margin: "auto"}}>

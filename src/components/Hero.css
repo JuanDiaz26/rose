@@ -1,0 +1,14 @@
+.hero-typewriter-wrapper {
+    margin-top: 20px;
+    max-width: 600px; /* o lo que vos prefieras */
+  }
+  
+  .hero-typewriter-text {
+    font-size: 1.5rem;
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: blinkCursor 0.7s infinite;
+    word-break: break-word; /* Esto hace que si una palabra es muy larga también se corte */
+    text-align: center; /* Opcional, si querés que quede bien prolijo */
+  }
+  

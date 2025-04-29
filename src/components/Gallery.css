@@ -1,0 +1,41 @@
+.gallery-typewriter-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  .gallery-typewriter-texts {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .gallery-typewriter-texts span {
+    display: inline-block;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    font-family: 'cursive';
+    font-size: 1.5rem;
+    color: #fff;
+    animation: typingGallery 3s steps(40) forwards, deletingGallery 3s steps(40) 3s forwards;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  @keyframes typingGallery {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 100%; }
+  }
+  
+  @keyframes deletingGallery {
+    0% { width: 100%; }
+    50% { width: 0; }
+    100% { width: 0; }
+  }
+  
